@@ -1,0 +1,39 @@
+{
+  "name": "lum/lum-wiki",
+  "description": "A flexible wiki-like content rendering system",
+  "license": "MIT",
+  "authors":
+  [
+    {
+      "name": "Timothy Totten",
+      "email": "supernovus@gmail.com",
+      "role": "Original Author"
+    }
+  ],
+  "require":
+  {
+    "lum/lum-compat": "^2.6",
+    "lum/lum-framework": "^2.1",
+    "erusev/parsedown-extra": "^0.8.1",
+    "netcarver/textile": "^3.7",
+    "twig/twig": "^3.3"
+  },
+  "require-dev":
+  {
+    "lum/lum-test": "^3.0"
+  },
+  "autoload":
+  {
+    "psr-4":
+    {
+      "Lum\\Wiki\\": "lib"
+    }
+  },
+  "extra":
+  {
+    "branch-alias":
+    {
+      "dev-main": "1.x-dev"
+    }
+  }
+}
