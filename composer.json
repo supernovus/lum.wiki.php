@@ -14,7 +14,7 @@
   {
     "lum/lum-compat": "^2.6",
     "lum/lum-framework": "^2.1",
-    "erusev/parsedown-extra": "^0.8.1",
+    "benjaminhoegh/parsedown-extended": "^1.1",
     "netcarver/textile": "^3.7",
     "twig/twig": "^3.3"
   },

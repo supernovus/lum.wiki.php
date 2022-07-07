@@ -2,11 +2,12 @@
 
 namespace Lum\Wiki;
 
-use Exception, ParsedownExtra;
+use Exception;
 use Lum\Plugins\Debug as DBG;
 use Lum\Wiki\Interfaces\{Categories,Category,Topics,Topic,Controller};
 use Lum\Wiki\Twig\Extension;
 use Lum\Wiki\Twig\Loader;
+use Lum\Wiki\Parser\Parsedown;
 use Twig\Environment as TwigEnv;
 use Netcarver\Textile\Parser as Textile;
 
@@ -59,7 +60,7 @@ class Parser
   protected readonly Categories $categories;
   protected readonly TwigEnv $twig;
   protected readonly Loader $twigLoader;
-  public readonly ParsedownExtra $parsedown;
+  public readonly Parsedown $parsedown;
   public readonly Textile $textile;
 
   protected array $exts = [];
@@ -125,7 +126,7 @@ class Parser
       throw new Exception("No '$o' model in constructor options");
     }
 
-    $this->parsedown = new ParsedownExtra();
+    $this->parsedown = new Parsedown();
     $this->textile = new Textile();
     $this->twigLoader = new Loader($this);
     $twigOpts = $opts[static::O_TWIG] ?? static::DEFAULT_TWIG_OPTS;
