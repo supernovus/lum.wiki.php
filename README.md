@@ -9,6 +9,7 @@ simple. There's not much documentation at the moment, I'll fix that later.
 
 ## TODO
 
+ * Rework this to be like [Doxs](https://github.com/supernovus/lum.doxs.js).
  * Write documentation.
  * Write tests.
 
